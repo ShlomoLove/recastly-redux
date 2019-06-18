@@ -4,16 +4,16 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      value: ''
-    };
+  //   this.state = {
+  //     value: ''
+  //   };
   }
 
   handleInputChange(e) {
     this.props.handleSearchInputChange(e.target.value);
-    this.setState({
-      value: e.target.value
-    });
+    // this.setState({
+    //   value: e.target.value
+    // });
   }
 
   render() {
@@ -22,7 +22,7 @@ class Search extends React.Component {
         <input
           className="form-control"
           type="text"
-          value={this.state.value}
+          // value={this.state.value}
           onChange={this.handleInputChange.bind(this)}
         />
         <button className="btn hidden-sm-down">

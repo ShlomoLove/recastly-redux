@@ -9,4 +9,20 @@ var SearchContainer = () => {};
 //HINT: use react-redux 'connect' method to generate a container component from
 //state and dispatch mappings.
 
+
+const mapStateToProps = ( state ) => {
+  return {
+    currentVideo: state.currentVideo,
+    videoList: state.videoList,
+  };
+}; 
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleSearchInputChange: (q) => {dispatch(handleSearchChange(q))},
+  };
+};
+
+var SearchContainer = connect(mapStateToProps, mapDispatchToProps)(Search);
+
 export default SearchContainer;
